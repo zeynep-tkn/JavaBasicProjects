@@ -1,0 +1,2 @@
+module OtomasyonTaslak2 {
+}
