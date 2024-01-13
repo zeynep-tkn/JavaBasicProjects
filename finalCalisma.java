@@ -9,7 +9,11 @@ public class finalCalisma {
 	   System.out.println("--------------------------------------------");
        System.out.println("Final Çalışma Sorularını bu sınıfa yazacağız");
        
+       ArtikYilHesap();
+       BasamakToplam(1350);
+       FibonacciBul();
        ondaliksayiAl();
+       
 	}
 	
 	public static void ondaliksayiAl() {
@@ -84,5 +88,52 @@ public class finalCalisma {
 	
 	}
 	
+	public static void FibonacciBul() {
+		int s1=0,s2=1,gecici;
+		Scanner scan= new Scanner(System.in);
+		System.out.println("Fibonacci dizisi...\n");
+		System.out.printf("lutfen dizinin son elemanını belirleyin:");
+        int n=scan.nextInt();
+        
+		for(int i=1;i<=n;i++) {
+			if(n<s1) {
+			break;
+			}
+			System.out.println(s1+", ");
+			int toplam=s1+s2;
+			s1=s2;
+			s2=toplam;	
+		}
+		// sayi:n  n,(n-1)+n,3n-1,5n-2,
+		//1,1,2,3,5,8
+	}
+	
+	public static void BasamakToplam(int bir) {
+		int toplam=0;
+		while(bir !=0){
+		toplam=(bir%10)+toplam;
+		bir=bir/10;
+		}
+		System.out.println("Basamak Toplamı= "+toplam);
+		//195  195%10=5  19%10=9  19/10=1
+	}
+	
+	public static void ArtikYilHesap() {
+		//4 veya 100 e bolunebilen yillar artik yildir
+		int yil=2018;
+		
+		if(yil%4==0) {
+		  System.out.println("Artik yildir");
+
+		}
+		
+		else if(yil%100==0) {
+			  System.out.println("Artik yildir");
+ 
+		} 
+		 else {
+			System.out.println("Artik yil degildir2");
+		 } 
+	}
 
 }
